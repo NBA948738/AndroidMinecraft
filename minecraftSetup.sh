@@ -59,7 +59,7 @@ chmod +x ../m
 if [ "$USE_NGROK" = "yes" ] ; then
   echo "STATUS: setting up ngrok"
   cd ..
-  wget -O ngrok.zip https://bin.equinox.io/a/e93TBaoFgZw/ngrok-2.2.8-linux-arm.zip && unzip ngrok.zip && chmod +x ngrok
+  wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz && tar -xzvf ngrok.tgz && chmod +x ngrok
   echo "./ngrok tcp -region=$NGROK_REGION 25565" > n
   chmod +x n
   ./ngrok authtoken $AUTHTOKEN
